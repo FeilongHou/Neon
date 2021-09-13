@@ -1,0 +1,23 @@
+#: import menu menu
+
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: 'images/bg2.jpg'
+    menu_screen: menu_screen
+    perspective_point_x: self.width/2
+    perspective_point_y: self.height * 0.75
+
+    Menu:
+        id: menu_screen
+
+    Label:
+        color: (1, 0, 154/255, 1)
+        text: root.score
+        font_name: 'fonts/FFF_Tusj.ttf'
+        font_size: '30dp'
+        size_hint: .18, .18
+        pos_hint: {"x":0.01, "top":1}
